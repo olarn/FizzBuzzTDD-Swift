@@ -14,6 +14,5 @@ func fizzBuzz(with number: Int) -> String {
 }
 
 fizzBuzz(with: 1).should(say: "1")  // should print "1" in playground runtime pane.
-
 fizzBuzz(with: 2).should(say: "2")  // should ptint "Wrong" in playground runtime pane.
 ```

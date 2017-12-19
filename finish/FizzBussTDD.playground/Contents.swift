@@ -43,17 +43,17 @@ let spec = [
     (number:  9, expected: "Fizz"),
     (number: 10, expected: "Buzz"),
     (number: 11, expected: "11"),
-    (number: 12, expected: "12"),
+    (number: 12, expected: "Fizz"),
     (number: 13, expected: "13"),
     (number: 14, expected: "14"),
     (number: 15, expected: "FizzBuzz"),
     (number: 30, expected: "FizzBuzz"),
-    (number: 50, expected: "Fizz")
+    (number: 50, expected: "Buzz")
 ]
 
 // Test code =====================================================
 
 for (number, expected) in spec {
     let actual = fizzBuzz(with: number).should(say: expected)
-    print("input \(number) say \(expected)")
+    print("input \(number) say \(actual)")
 }

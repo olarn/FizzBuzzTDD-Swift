@@ -7,6 +7,20 @@ Finish is a final code.
 
 I provided func should(say:) in "Sources" folder under playground file. So that you can fun with TDD without Xcode test framework.
 
+```
+extension String {
+    
+    public func should(say expected: String) -> String {
+        if expected != self {
+            return "Wrong!"
+        }
+        else {
+            return self
+        }
+    }
+}
+```
+
 ###### Example :-
 ```
 func fizzBuzz(with number: Int) -> String {

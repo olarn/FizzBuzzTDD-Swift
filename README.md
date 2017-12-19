@@ -9,14 +9,8 @@ I provided func should(say:) in "Sources" folder under playground file. So that 
 
 ```
 extension String {
-    
     public func should(say expected: String) -> String {
-        if expected != self {
-            return "Wrong!"
-        }
-        else {
-            return self
-        }
+        return expected == self ? self : "Wrong!"
     }
 }
 ```

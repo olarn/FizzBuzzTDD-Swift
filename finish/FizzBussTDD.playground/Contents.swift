@@ -2,7 +2,7 @@ import UIKit
 
 var str = "Hello, FizzBuss TDD"
 
-// FizzBuzz code =====================================================
+// FizzBuzz code ================================================
 
 func fizzBuzz(with number: Int) -> String {
     if isFizzBuzz(number: number) {
@@ -29,23 +29,31 @@ func isBuzz(number: Int) -> Bool {
     return number % 5 == 0
 }
 
+// Test Spec. ====================================================
+
+let spec = [
+    (number:  1, expected: "1"),
+    (number:  2, expected: "2"),
+    (number:  3, expected: "Fizz"),
+    (number:  4, expected: "4"),
+    (number:  5, expected: "Buzz"),
+    (number:  6, expected: "Fizz"),
+    (number:  7, expected: "7"),
+    (number:  8, expected: "8"),
+    (number:  9, expected: "Fizz"),
+    (number: 10, expected: "Buzz"),
+    (number: 11, expected: "11"),
+    (number: 12, expected: "12"),
+    (number: 13, expected: "13"),
+    (number: 14, expected: "14"),
+    (number: 15, expected: "FizzBuzz"),
+    (number: 30, expected: "FizzBuzz"),
+    (number: 50, expected: "Fizz")
+]
+
 // Test code =====================================================
 
-fizzBuzz(with: 1).should(say: "1")
-fizzBuzz(with: 2).should(say: "2")
-fizzBuzz(with: 3).should(say: "Fizz")
-fizzBuzz(with: 4).should(say: "4")
-fizzBuzz(with: 5).should(say: "Buzz")
-fizzBuzz(with: 6).should(say: "Fizz")
-fizzBuzz(with: 7).should(say: "7")
-fizzBuzz(with: 8).should(say: "8")
-fizzBuzz(with: 9).should(say: "Fizz")
-fizzBuzz(with: 10).should(say: "Buzz")
-fizzBuzz(with: 11).should(say: "11")
-fizzBuzz(with: 12).should(say: "Fizz")
-fizzBuzz(with: 13).should(say: "13")
-fizzBuzz(with: 14).should(say: "14")
-fizzBuzz(with: 15).should(say: "FizzBuzz")
-fizzBuzz(with: 30).should(say: "FizzBuzz")
-
-
+for (number, expected) in spec {
+    let actual = fizzBuzz(with: number).should(say: expected)
+    print("input \(number) say \(expected)")
+}

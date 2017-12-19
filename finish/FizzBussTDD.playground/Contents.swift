@@ -2,6 +2,8 @@ import UIKit
 
 var str = "Hello, FizzBuss TDD"
 
+// FizzBuzz code =====================================================
+
 func fizzBuzz(with number: Int) -> String {
     if isFizzBuzz(number: number) {
         return "FizzBuzz"
@@ -26,6 +28,8 @@ func isFizz(number: Int) -> Bool {
 func isBuzz(number: Int) -> Bool {
     return number % 5 == 0
 }
+
+// Test code =====================================================
 
 fizzBuzz(with: 1).should(say: "1")
 fizzBuzz(with: 2).should(say: "2")
